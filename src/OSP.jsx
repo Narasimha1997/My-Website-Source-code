@@ -11,7 +11,7 @@ class Projects extends React.Component{
     }
 
     componentWillMount(){
-        fetch('https://api.github.com/users/Narasimha1997/repos', {
+        fetch('https://api.github.com/users/Narasimha1997/repos?per_page=100', {
             method : 'GET'
         }).then((data) => data.json()).then((data) => this.setState({projects : data})).catch((err) => console.log(err))
     }
